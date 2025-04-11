@@ -1,0 +1,18 @@
+package in.thinkedge;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ThinkedgeApplication {
+
+	public static void main(String[] args) {	
+	
+		SpringApplication.run(ThinkedgeApplication.class, args);
+		
+	
+	
+	}
+	
+}
+ 	  
