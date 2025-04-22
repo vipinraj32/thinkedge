@@ -10,14 +10,17 @@ import java.util.Map;
 
 import org.hibernate.bytecode.internal.bytebuddy.PrivateAccessorException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
+import org.springframework.data.web.ProjectedPayload;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.MediaTypeFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,8 +38,10 @@ import io.jsonwebtoken.io.IOException;
 import jakarta.validation.Valid;
 
 @RestController
+@CrossOrigin
 public class CourseVideoController {
-    private final String  VIDEO_URL="D:/video/";
+	@Value("${project.manager}")
+    private  String  VIDEO_URL;
     @Autowired
     private CourseVideoServiceImpl courseVideoServiceImpl;
   

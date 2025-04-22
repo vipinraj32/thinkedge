@@ -83,21 +83,21 @@ public class SecurityConfig {
     
 
     //CORS Configuration Bean (Required for Spring Security)
-    @Bean
-    public CorsFilter corsFilter() {
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("http://localhost:5173");
-        config.addAllowedOrigin("http://localhost:3000");
-        config.addAllowedOrigin("http://localhost:5174");
-       
-        
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
-        config.setAllowCredentials(true);
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
-    }
+//    @Bean
+//    public CorsFilter corsFilter() {
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//        CorsConfiguration config = new CorsConfiguration();
+//        config.addAllowedOrigin("http://localhost:5173");
+//        config.addAllowedOrigin("http://localhost:3000");
+//        config.addAllowedOrigin("http://localhost:5174");
+//       
+//        
+//        config.addAllowedHeader("*");
+//        config.addAllowedMethod("*");
+//        config.setAllowCredentials(true);
+//        source.registerCorsConfiguration("/**", config);
+//        return new CorsFilter(source);
+//    }
 //    @Bean
 //    public DaoAuthenticationProvider dodaoAuthenticationProvider() {
 //    	DaoAuthenticationProvider daoAuthenticationProvider =new DaoAuthenticationProvider();

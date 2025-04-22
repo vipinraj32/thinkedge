@@ -42,7 +42,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("admin")
-@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+@CrossOrigin
 public class CourseController {
 	@Autowired
 	private CourseServiceImpl courseServiceImpl;
